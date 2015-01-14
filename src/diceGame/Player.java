@@ -9,7 +9,7 @@ public class Player {
 	public Player() {
 	}
 
-	public Player(int number) {
+	public void addScore(int number) {
 		sum += number;
 	}
 
