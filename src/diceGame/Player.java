@@ -4,12 +4,12 @@ public class Player {
 
 	public int sum = 0;
 	public String name;
-	public String state, diceMode; // 사기인지아닌지
+	public String state;
 
 	public Player() {
 	}
 
-	public void addScore(int number) {
+	public void addGrade(int number) {
 		sum += number;
 	}
 

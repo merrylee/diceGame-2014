@@ -5,35 +5,30 @@ public class GameMain {
 	public static void main(String[] args) {
 
 		int gameCount = 5;
-		int round=0;
-		String nameA = "피카츄"; //사기
-		String nameB = "이선민"; //일반
-
+		int round = 0;
+		String winner;
+		
 		Judge judge = new Judge();
-		Dice dice = new Dice();
-		
-		judge.playerA.name = nameA;
-		judge.playerB.name = nameB;
-		judge.gameCount = gameCount;
-		
+		Recorder recorder = new Recorder();
 
-		while(round < gameCount) {
-			
+		judge.playerA.name = "피카츄";
+		judge.playerB.name = "이선민";
+
+		while (round < gameCount) {
+
 			judge.changeState(judge.playerA, judge.playerB);
-			judge.playgame();
+			judge.playGame();
 
-
-			judge.playPrint(judge.playerA, judge.playerB);
+			recorder.printScore(judge.playerA, judge.playerB);
+			
 			round++;
 		}
-		
-		judge.endMessage();
-		
-		String winner;
-		winner = judge.judgeWinner();
-		judge.resultMessage(winner);
-		
-		
-	}
 
+		recorder.printEndMessage();
+
+		winner = judge.getWinner();
+		recorder.printResultMessage(winner);
+
+	}
+	
 }

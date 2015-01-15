@@ -4,13 +4,13 @@ public class Dice {
 
 	private int diceNumber;
 
-	public int normalRoll() {
+	public int rollNormal() {
 
 		getNumber();
 		return diceNumber;
 	}
 
-	public int easyRoll() {
+	public int rollEasy() {
 
 		do {
 			getNumber();
@@ -19,7 +19,7 @@ public class Dice {
 		return diceNumber;
 	}
 
-	public int hardRoll() {
+	public int rollHard() {
 
 		do {
 			getNumber();
