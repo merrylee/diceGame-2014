@@ -20,12 +20,14 @@ public class Judge {
 
 	public void changeState(Player playerA, Player playerB) {
 
+		int gapNumber = 6;
+
 		playerA.state = "[NORMAL]";
 
 		if (playerA.sum < playerB.sum) {
 			playerA.state = "[HARD]";
 		}
-		if (playerA.sum > playerB.sum + 6) {
+		if (playerA.sum > playerB.sum + gapNumber) {
 			playerA.state = "[EASY]";
 		}
 	}
