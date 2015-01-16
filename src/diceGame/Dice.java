@@ -41,7 +41,7 @@ public class Dice {
 	}
 
 	@Test
-	public void testDice_easy모드면_1234_사이_숫자_출력한다() {
+	public void testDice_easy모드면_1234사이_숫자_출력한다() {
 
 		int result = rollEasy();
 

@@ -2,7 +2,7 @@ package diceGame;
 
 public class Player {
 
-	public int sum = 0;
+	public int sum;
 	public String name;
 	public String state;
 

@@ -16,7 +16,7 @@ public class GameMain {
 
 		while (round < gameCount) {
 
-			judge.changeState(judge.playerA, judge.playerB);
+			judge.changeState();
 			judge.playGame();
 
 			recorder.printScore(judge.playerA, judge.playerB);
