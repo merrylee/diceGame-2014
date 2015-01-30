@@ -1,5 +1,7 @@
 package diceGame;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class GameMain {
 
 	public static void main(String[] args) {
@@ -8,8 +10,11 @@ public class GameMain {
 		int round = 0;
 		String winner;
 		
-		Judge judge = new Judge();
-		Recorder recorder = new Recorder();
+		ClassPathXmlApplicationContext context =
+				new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		Judge judge = (Judge)context.getBean("judge");
+		Recorder recorder = (Recorder)context.getBean("recorder");
 
 		judge.playerA.name = "피카츄";
 		judge.playerB.name = "이선민";

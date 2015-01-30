@@ -1,8 +1,5 @@
 package diceGame;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
-
 public class Judge {
 	
 	Player playerA = new Player();
@@ -47,20 +44,4 @@ public class Judge {
 		return winner;
 	}
 	
-	@Test
-	public void testWinner_playerB의_총점이_높으면_승자는_B이다() {
-
-		Judge judge = new Judge();
-
-		judge.playerA.sum = 10;
-		judge.playerA.name = "피카츄";
-		judge.playerB.sum = 12;
-		judge.playerB.name = "이선민";
-		
-		String result = judge.getWinner();
-
-		assertEquals("이선민",result);
-
-	}
-
 }
