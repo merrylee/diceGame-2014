@@ -1,12 +1,12 @@
 package diceGame;
 
-public class Judge {
+public class Judge{
 	
-	Player playerA = new Player();
-	Player playerB = new Player();
-	Dice dice = new Dice();
-	FraudDice fraudDice = new FraudDice();
-
+	Player playerA;
+	Player playerB;
+	Dice dice;
+	FraudDice fraudDice;
+	
 	public void playGame() {
 
 		int score, score2;
@@ -44,4 +44,19 @@ public class Judge {
 		return winner;
 	}
 	
+	public void setPlayerA(Player playerA) {
+		this.playerA = playerA;
+	}
+	
+	public void setPlayerB(Player playerB) {
+		this.playerB = playerB;
+	}
+	
+	public void setDice(Dice dice) {
+		this.dice = dice;
+	}
+	
+	public void setFraudDice(FraudDice fraudDice) {
+		this.fraudDice = fraudDice;
+	}
 }
