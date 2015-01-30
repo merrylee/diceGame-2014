@@ -1,8 +1,5 @@
 package diceGame;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
-
 public class Dice {
 
 	private int diceNumber;
@@ -38,15 +35,6 @@ public class Dice {
 	public int getNumber() {
 		diceNumber = (int) Math.round(1 + Math.random() * 5);
 		return diceNumber;
-	}
-
-	@Test
-	public void testDice_easy모드면_1234사이_숫자_출력한다() {
-
-		int result = rollEasy();
-
-		assertEquals(1, result, 3);
-
 	}
 
 }
