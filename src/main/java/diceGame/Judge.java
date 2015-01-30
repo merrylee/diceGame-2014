@@ -1,15 +1,12 @@
 package diceGame;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
-
-public class Judge {
+public class Judge{
 	
-	Player playerA = new Player();
-	Player playerB = new Player();
-	Dice dice = new Dice();
-	FraudDice fraudDice = new FraudDice();
-
+	Player playerA;
+	Player playerB;
+	Dice dice;
+	FraudDice fraudDice;
+	
 	public void playGame() {
 
 		int score, score2;
@@ -47,20 +44,19 @@ public class Judge {
 		return winner;
 	}
 	
-	@Test
-	public void testWinner_playerB의_총점이_높으면_승자는_B이다() {
-
-		Judge judge = new Judge();
-
-		judge.playerA.sum = 10;
-		judge.playerA.name = "피카츄";
-		judge.playerB.sum = 12;
-		judge.playerB.name = "이선민";
-		
-		String result = judge.getWinner();
-
-		assertEquals("이선민",result);
-
+	public void setPlayerA(Player playerA) {
+		this.playerA = playerA;
 	}
-
+	
+	public void setPlayerB(Player playerB) {
+		this.playerB = playerB;
+	}
+	
+	public void setDice(Dice dice) {
+		this.dice = dice;
+	}
+	
+	public void setFraudDice(FraudDice fraudDice) {
+		this.fraudDice = fraudDice;
+	}
 }
